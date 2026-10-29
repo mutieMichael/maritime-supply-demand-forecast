@@ -83,7 +83,7 @@ def generate_dataset(
 ) -> SyntheticBook:
     """Generate vessel calls, orders, and a complete daily demand panel.
 
-    ``ports`` and ``categories`` default to the full demo set. Tests use a
+    ``ports`` and ``categories`` default to the full set. Tests use a
     shorter date range; the seed still fixes every draw.
     """
 

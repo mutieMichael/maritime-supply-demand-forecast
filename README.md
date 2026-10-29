@@ -2,7 +2,7 @@
 
 A demand forecast for a ship chandler: how much provisions, fresh water, lubricants, deck and engine stores, and safety equipment to put on the next order, given the vessels due alongside.
 
-Silent Ramihel Limited supplies ships calling at port and builds the forecasting and planning tools that sit behind that work. This repository is the public demo of the data-science line. It uses the chandlery problem because the same morning decision — read the lineup, forecast the book, place the order — is where the two practices meet.
+Michael Mutie ([@mutieMichael](https://github.com/mutieMichael)) of Silent Ramihel Limited. The company supplies ships calling at port and builds the forecasting and planning tools that sit behind that work. This repository is that forecasting work. It uses the chandlery problem because the same morning decision — read the lineup, forecast the book, place the order — is where the two practices meet.
 
 > **Synthetic data.** There is no client extract in this repo. Vessel calls, order quantities, prices, and the error figures below were produced by a seeded generator (`SEED = 42`). They are not measurements from Mombasa, Dar es Salaam, Djibouti, Durban, or any ship. The ports are named so the story is easy to tell. The numbers attached to them are invented.
 
@@ -10,7 +10,7 @@ Silent Ramihel Limited supplies ships calling at port and builds the forecasting
 
 A chandler does not stock against a smooth average. Monday is heavy because Sunday arrivals are booked the next open day. A cruise call moves provisions. A quiet Sunday is close to the walk-in floor. Safety gear is sparse until a survey season. The purchase has a lead time, and the next time someone reviews the stock is days away, so the order has to cover both.
 
-The demo lets you pick a port, a category, and a review cycle, then shows:
+The app lets you pick a port, a category, and a review cycle, then shows:
 
 - a daily forecast and a 90% band
 - the vessel lineup those days are based on
@@ -71,7 +71,7 @@ Reading it in the order a buyer cares about:
 | Lubricants | 39.9% | 19.5% |
 | Safety equipment | 65.2% | 24.2% |
 
-These percentages are errors on the generated holdout. They are not a claim about live accuracy in any port.
+These percentages are errors on the synthetic holdout. They are not a claim about live accuracy in any port.
 
 ![14-day model comparison](reports/figures/model_comparison.png)
 
@@ -143,7 +143,7 @@ make notebook
 
 The app is not deployed from here. To put it on Community Cloud:
 
-1. Use this repository and the `main` branch after the demo is merged.
+1. Use this repository and the `main` branch.
 2. Set the main file to `app.py`. `runtime.txt` asks for Python 3.12. Dependencies are in `requirements.txt`.
 3. Add no secrets. The app reads the committed synthetic CSVs and the model bundle.
 4. Open the app, pick a port and a category, and change the review cycle. The order quantity should move.
@@ -176,12 +176,12 @@ tests/                          Generator, leakage, metrics, order math, backtes
 
 ## Caveats
 
-- The demand equations are the author's assumptions. A real book of invoices would replace them. The evaluation design would stay: a cutoff, rolling origins, and an error measured on the order, not on a shuffled row.
-- The lineup in the backtest is the realised booking, treated as if the agent already held those ETAs. A live feed is wrong about ships that slip a day. That error is not in this generator.
+- The demand equations are modelling choices for this book. A real set of invoices would replace them. The evaluation design would stay: a cutoff, rolling origins, and an error measured on the order, not on a shuffled row.
+- The lineup in the backtest is the realised booking, treated as if the ship's agent already held those ETAs. A live feed is wrong about ships that slip a day. That error is not in this generator.
 - Basket prices are round synthetic figures used only to put categories on one scale and to show an order value.
 - Holiday dates, including Eid and Ramadan, are fixed inputs to the generator. They are not a religious or legal calendar.
 - The 90% band is an empirical residual scale, not a formal prediction interval.
 
 ---
 
-Built by Silent Ramihel Limited · [silentramihellimited@gmail.com](mailto:silentramihellimited@gmail.com)
+Michael Mutie ([@mutieMichael](https://github.com/mutieMichael)), Silent Ramihel Limited · [silentramihellimited@gmail.com](mailto:silentramihellimited@gmail.com)

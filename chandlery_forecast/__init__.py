@@ -1,6 +1,8 @@
 """Synthetic ship-chandlery demand forecasting.
 
-Every quantity this package produces is generated. Nothing here is a
+Michael Mutie (GitHub @mutieMichael), Silent Ramihel Limited.
+
+Every quantity this package produces is synthetic. Nothing here is a
 measurement from a port, a client, or a published statistic.
 """
 

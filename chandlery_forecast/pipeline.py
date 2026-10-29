@@ -1,4 +1,4 @@
-"""Generate, score, and save the demo artefacts.
+"""Build the synthetic book, score it, and save the reports.
 
 The entry point used by ``make train``. It refits every model, writes the
 metrics the README quotes, and stores the lineup gradient-boosting model
@@ -86,7 +86,7 @@ def train_and_evaluate() -> dict:
     )
 
     bundle = {
-        "disclaimer": "Synthetic demonstration model. Not fit on client or port data.",
+        "disclaimer": "Synthetic forecast. Not fit on client or port data.",
         "package_version": __version__,
         "generator_version": GENERATOR_VERSION,
         "seed": book.metadata.get("seed", SEED),

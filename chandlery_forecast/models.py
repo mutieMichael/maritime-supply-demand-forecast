@@ -5,7 +5,7 @@ one series. The ridge and gradient-boosting models are global: one fit
 covers every port and category, on the log1p of demand, with the horizon
 as a feature (direct multi-step, not recursive).
 
-The lineup model is the one the demo orders against. The others exist to
+The lineup model is the one the app orders against. The others exist to
 show what that lineup is worth.
 """
 

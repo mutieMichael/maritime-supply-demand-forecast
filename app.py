@@ -1,4 +1,6 @@
-"""Streamlit entry point for the chandlery demand demo.
+"""Streamlit entry point for the chandlery demand forecast.
+
+Michael Mutie (@mutieMichael), Silent Ramihel Limited.
 
 Run locally with ``streamlit run app.py``. On Streamlit Community Cloud,
 point the app at this file. It reads the synthetic book and the model
@@ -111,14 +113,14 @@ def render_banner() -> None:
         """
         <div class="banner">
           <h1>Chandlery demand forecast</h1>
-          <p>Silent Ramihel Limited · synthetic order book for provisions, water, lubricants, stores, and safety gear.</p>
+          <p>Michael Mutie · Silent Ramihel Limited · synthetic order book for provisions, water, lubricants, stores, and safety gear.</p>
         </div>
         """,
         unsafe_allow_html=True,
     )
     st.markdown(
         '<div class="note">Every vessel, quantity, price, and error in this app is <b>synthetic</b>. '
-        "It was generated from a fixed seed so the demo can be rerun. It is not a record of Mombasa, "
+        "It comes from a fixed seed so the same book can be reproduced. It is not a record of Mombasa, "
         "Dar es Salaam, Djibouti, Durban, or any client.</div>",
         unsafe_allow_html=True,
     )
@@ -427,7 +429,7 @@ def main() -> None:
         page_method()
 
     st.markdown(
-        '<p class="footer">Built by Silent Ramihel Limited · silentramihellimited@gmail.com</p>',
+        '<p class="footer">Michael Mutie (@mutieMichael), Silent Ramihel Limited · silentramihellimited@gmail.com</p>',
         unsafe_allow_html=True,
     )
 

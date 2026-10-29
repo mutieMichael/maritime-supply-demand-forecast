@@ -56,12 +56,12 @@ def backtest_origins(
 
     if step_days < 1 or max_horizon < 1:
         raise ValueError("step_days and max_horizon must be positive")
-    cursor = pd.Timestamp(cutoff)
+    day = pd.Timestamp(cutoff)
     last = pd.Timestamp(data_end) - pd.Timedelta(days=max_horizon)
     origins: list[pd.Timestamp] = []
-    while cursor <= last:
-        origins.append(cursor)
-        cursor += pd.Timedelta(days=step_days)
+    while day <= last:
+        origins.append(day)
+        day += pd.Timedelta(days=step_days)
     if not origins:
         raise ValueError("No backtest origins: the series is shorter than the horizon after the cutoff")
     return origins

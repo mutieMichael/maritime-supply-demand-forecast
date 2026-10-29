@@ -2,7 +2,7 @@
 
 These constants are modelling choices for a fictional order book. They are
 not estimates of real port traffic, crew levels, or prices. The narrative
-uses four well-known ports so the demo is easy to talk about; the numbers
+uses four well-known ports so the setting is easy to place; the numbers
 attached to them are invented.
 """
 
