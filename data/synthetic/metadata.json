@@ -1,0 +1,23 @@
+{
+  "disclaimer": "Synthetic data generated for demonstration. Not measurements from any port, vessel, or client.",
+  "generator_version": "1.0.0",
+  "seed": 42,
+  "start": "2022-01-01",
+  "end": "2026-09-30",
+  "ports": [
+    "Mombasa",
+    "Dar es Salaam",
+    "Djibouti",
+    "Durban"
+  ],
+  "categories": [
+    "provisions",
+    "fresh_water",
+    "lubricants",
+    "deck_engine_stores",
+    "safety_equipment"
+  ],
+  "n_calls": 34315,
+  "n_orders": 67963,
+  "n_demand_rows": 34680
+}
