@@ -1,0 +1,11 @@
+[project]
+name = "chandlery-forecast"
+version = "1.0.0"
+description = "Ship-chandlery demand forecasting by Michael Mutie, Silent Ramihel Limited"
+authors = [{name = "Michael Mutie", email = "silentramihellimited@gmail.com"}]
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"

@@ -1,0 +1,117 @@
+{
+  "disclaimer": "Metrics are errors on the synthetic holdout, not a promise about a live port.",
+  "cutoff": "2026-03-31",
+  "primary_horizon_days": 14,
+  "rows": [
+    {
+      "model": "hgb_lineup",
+      "label": "Gradient boosting + lineup",
+      "level": "daily",
+      "mae": 2398.79,
+      "rmse": 5543.02,
+      "wape": 0.4411,
+      "mase": 0.454,
+      "bias": -265.06,
+      "n": 3360
+    },
+    {
+      "model": "fourier_ridge",
+      "label": "Fourier ridge",
+      "level": "daily",
+      "mae": 3370.52,
+      "rmse": 7698.58,
+      "wape": 0.6198,
+      "mase": 0.649,
+      "bias": -1014.6,
+      "n": 3360
+    },
+    {
+      "model": "hgb_history",
+      "label": "Gradient boosting",
+      "level": "daily",
+      "mae": 3626.99,
+      "rmse": 7964.31,
+      "wape": 0.667,
+      "mase": 0.699,
+      "bias": 17.09,
+      "n": 3360
+    },
+    {
+      "model": "holt_winters",
+      "label": "Holt-Winters (weekly)",
+      "level": "daily",
+      "mae": 3746.28,
+      "rmse": 7680.27,
+      "wape": 0.6889,
+      "mase": 0.722,
+      "bias": 388.24,
+      "n": 3360
+    },
+    {
+      "model": "seasonal_naive",
+      "label": "Seasonal naive (7-day)",
+      "level": "daily",
+      "mae": 4925.97,
+      "rmse": 10804.86,
+      "wape": 0.9059,
+      "mase": 0.948,
+      "bias": 283.94,
+      "n": 3360
+    },
+    {
+      "model": "hgb_lineup",
+      "label": "Gradient boosting + lineup",
+      "level": "horizon_total",
+      "mae": 11776.27,
+      "rmse": 22344.5,
+      "wape": 0.1547,
+      "mase": null,
+      "bias": -3710.91,
+      "n": 240
+    },
+    {
+      "model": "holt_winters",
+      "label": "Holt-Winters (weekly)",
+      "level": "horizon_total",
+      "mae": 15997.16,
+      "rmse": 30490.36,
+      "wape": 0.2101,
+      "mase": null,
+      "bias": 5435.39,
+      "n": 240
+    },
+    {
+      "model": "hgb_history",
+      "label": "Gradient boosting",
+      "level": "horizon_total",
+      "mae": 18110.86,
+      "rmse": 35363.41,
+      "wape": 0.2379,
+      "mase": null,
+      "bias": 239.27,
+      "n": 240
+    },
+    {
+      "model": "fourier_ridge",
+      "label": "Fourier ridge",
+      "level": "horizon_total",
+      "mae": 20654.85,
+      "rmse": 40531.03,
+      "wape": 0.2713,
+      "mase": null,
+      "bias": -14204.34,
+      "n": 240
+    },
+    {
+      "model": "seasonal_naive",
+      "label": "Seasonal naive (7-day)",
+      "level": "horizon_total",
+      "mae": 24388.62,
+      "rmse": 48500.17,
+      "wape": 0.3204,
+      "mase": null,
+      "bias": 3975.1,
+      "n": 240
+    }
+  ]
+}
